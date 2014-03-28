@@ -1,0 +1,32 @@
+1.	Vorstellung Sonar
+  a.	Bestandteile
+  b.	Begriffe / Konzepte hinter Sonar
+  c.	Regeln / Metriken (eher aus Architektursicht)
+  d.	Vorstellung
+2.	Nutzung auf dem CI-System
+  a.	Betonung, dass Buildbreaker universell eingesetzt werden kann
+  b.	Verschiedene Integrationsmöglichkeiten ins CI-System darstellen
+    i.	Nightly check
+    ii.	Code Analyse bei jedem Push
+    iii.	Zusammen mit Gerrit für pre-commit-checks
+  c.	Vorstellung
+Anmerkung: Anzeige der Issues vorführen (kurz auf Einschränkungen eingehen oder aufbohren)
+  3.	Nutzung in der Entwicklung
+    a.	Eclipse-Plugin erklären
+    b.	Vorstellung
+Anmerkung: Mehr Beispiele erstellen (nicht in Branches, sondern live demonstrieren)
+Prüfen welche Regeln im Eclipse-Plugin geprüft werden
+  4.	Tipps für Einsatz von SonarQube
+    a.	Auf Geschwindigkeit eingehen (zentrale Instanz, embedded DB / Standalone DB)
+  5.	Puffer für anderen Werkzeuge (ConQat, Sonargraph, …)
+  
+vorzustellende Regeln:
+Architecture Constraint
+Cycles
+unused Methods / deprecated Methods
+Code-Duplikate
+Classes should not be coupled to too many other classes (Single Responsibility Principle)
+Avoid too deep inheritance tree
+Avoid too high LCOM4
+(Mit Verweisen auf Clean Code)
+
