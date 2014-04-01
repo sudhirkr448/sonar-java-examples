@@ -11,8 +11,8 @@
     iii.	Zusammen mit Gerrit für pre-commit-checks
   c.	Vorstellung
 Anmerkung: Anzeige der Issues vorführen (kurz auf Einschränkungen eingehen oder aufbohren)
-  3.	Nutzung in der Entwicklung
-    a.	Eclipse-Plugin erklären
+  3.	Nutzung in der Entwicklung (Sonarqube)
+    a.	Eclipse-Plugin erklären 
     b.	Vorstellung
 Anmerkung: Mehr Beispiele erstellen (nicht in Branches, sondern live demonstrieren)
 Prüfen welche Regeln im Eclipse-Plugin geprüft werden
