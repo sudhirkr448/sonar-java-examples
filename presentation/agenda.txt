@@ -15,6 +15,7 @@ Anmerkung: Anzeige der Issues vorführen (kurz auf Einschränkungen eingehen ode
     a.	Eclipse-Plugin erklären 
     b.	Vorstellung
 Anmerkung: Mehr Beispiele erstellen (nicht in Branches, sondern live demonstrieren)
+  Pro Regelverletzung gibt es einen Branch. Dieser wird als Grundlage für die Vorführung genommen.
 Prüfen welche Regeln im Eclipse-Plugin geprüft werden
   4.	Tipps für Einsatz von SonarQube
     a.	Auf Geschwindigkeit eingehen (zentrale Instanz, embedded DB / Standalone DB)
