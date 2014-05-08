@@ -1,5 +1,6 @@
 package org.example.business;
 
+import org.example.client.AddressController;
 import org.example.model.Address;
 import org.example.persistence.AddressDAO;
 import org.example.persistence.AddressDAOImpl;
@@ -10,6 +11,9 @@ import org.example.persistence.AddressDAOImpl;
 public class AddressServiceImpl implements AddressService {
 
 	private AddressDAO addressDAO = new AddressDAOImpl();
+	
+	// !! Verletzung !!
+	private final AddressController controller = new AddressController();
 
 	public String createAddress(Address address) {
 		// prüfung auf nicht null object
@@ -21,6 +25,11 @@ public class AddressServiceImpl implements AddressService {
 	public Address findAddress(String city, String street, String zipCode) {
 		// prüfung auf die eingebebenen Parameter
 		return addressDAO.findAddress(city, street, zipCode);
+	}
+	
+	// !! Verletzung !!
+	public String getAddressTemplate() {
+		return controller.getAddressTemplate();
 	}
 
 }

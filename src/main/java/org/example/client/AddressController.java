@@ -19,7 +19,7 @@ public class AddressController {
 		return NAVIGATION_ID;
 	}
 
-	/* !! Dies ist nicht erlaubt laut Architektur Regeln !! */
+	/* !! Verletzungen !! */
 	String createByAccessingDAO() {
 		new AddressDAOImpl().save(getAddress());
 		return NAVIGATION_ID;
@@ -30,5 +30,9 @@ public class AddressController {
 	 */
 	private Address getAddress() {
 		return new Address();
+	}
+	
+	public String getAddressTemplate() {
+		return "";
 	}
 }
