@@ -19,6 +19,12 @@ public class AddressController {
 		return NAVIGATION_ID;
 	}
 
+	/* !! Dies ist nicht erlaubt laut Architektur Regeln !! */
+	String createByAccessingDAO() {
+		new AddressDAOImpl().save(getAddress());
+		return NAVIGATION_ID;
+	}
+	
 	/*
 	 * z.B Zugriff auf einen BackingBean um die Werte aus dem View zu lesen.
 	 */
