@@ -7,7 +7,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import org.example.business.AddressService;
 import org.example.business.AddressServiceImpl;
 import org.example.client.AddressController;
 import org.example.model.Address;
@@ -19,9 +18,6 @@ public class AddressDAOImpl implements AddressDAO {
 
 	private static Map<String, Address> database = new HashMap<String, Address>();
 	
-	// !! Verletzungen !!
-	private final AddressController addressController = new AddressController();
-	private final AddressService service = new AddressServiceImpl();
 	
 	public Address save(Address address) {
 		database.put(address.getId(), address);
@@ -39,4 +35,14 @@ public class AddressDAOImpl implements AddressDAO {
 		return null;
 	}
 
+	
+	public Address getAddressTemplate() {
+		/*!! Verletzung !!*/
+		return new AddressController().getAddressTemplate();
+	}
+	
+	public Address getAddressTemplate2() {
+		/*!! Verletzung !!*/
+		return new AddressServiceImpl().getAddressTemplate();
+	}
 }

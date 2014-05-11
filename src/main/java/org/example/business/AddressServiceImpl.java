@@ -12,9 +12,6 @@ public class AddressServiceImpl implements AddressService {
 
 	private AddressDAO addressDAO = new AddressDAOImpl();
 	
-	// !! Verletzung !!
-	private final AddressController controller = new AddressController();
-
 	public String createAddress(Address address) {
 		// prüfung auf nicht null object
 		// exception wird geworfen bei nicht erfüllung der PRE Condition
@@ -26,10 +23,10 @@ public class AddressServiceImpl implements AddressService {
 		// prüfung auf die eingebebenen Parameter
 		return addressDAO.findAddress(city, street, zipCode);
 	}
-	
-	// !! Verletzung !!
-	public String getAddressTemplate() {
-		return controller.getAddressTemplate();
-	}
 
+	public Address getAddressTemplate() {
+		/*!! Verletzung !!*/
+		return new AddressController().getAddressTemplate();
+	}
+	
 }
