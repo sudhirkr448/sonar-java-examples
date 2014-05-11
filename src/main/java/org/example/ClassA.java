@@ -1,18 +1,23 @@
 package org.example;
 
-/**
- * Demomstiert das Beispiel für unbenutze Code 
- */
 public class ClassA {
-
-	private String message;
 	
-    private void displayMessage(){
-    	System.out.println("The message");
+	/*!! Verletzungen !!*/
+    private void displayMessage(String message){
+    	System.out.println(message);
+    }
+    
+    /*!! Verletzungen !!*/
+    protected void displayMessage(String message, int times){
+    	while(times > 0) {
+    		System.out.println(message);
+    		--times;
+    	}
     }
     
     public void sayHello() {
-    	System.out.println("Hello Sonar");
+    	/*!! Verletzungen !!*/
+    	String.format("%s: %s", new ClassB().getDateAsString(), "Hello Sonar");
     }
 	
 }
