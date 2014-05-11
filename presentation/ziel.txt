@@ -1,1 +1,6 @@
 Das Ziel dieses Branches ist es, die Cyclen durch sonar zu entdecken.
+
+--> bedeutet nutzt.
+
+A --> B --> C --> D --> B
+
