@@ -1,223 +1,355 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+<head>
+<meta charset="utf-8">
 
-		<title>Architekturforum: Einsatz von Sonar zur Kontrolle der Architektur</title>
+<title>Architekturforum: Einsatz von Sonar zur Kontrolle der
+	Architektur</title>
 
-		<meta name="description" content="Einsatz von sonar zur Kontrolle der Architektur">
-		<meta name="author" content="Derrick Fiedler">
-		<meta name="author" content="Dimitrij Pinneker">
+<meta name="description"
+	content="Einsatz von sonar zur Kontrolle der Architektur">
+<meta name="author" content="Derrick Fiedler">
+<meta name="author" content="Dimitrij Pinneker">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style"
+	content="black-translucent" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/serif.css" id="theme">
+<link rel="stylesheet" href="css/reveal.min.css">
+<link rel="stylesheet" href="css/theme/serif.css" id="theme">
 
 
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+<!-- For syntax highlighting -->
+<link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
-		<script>
-			if( window.location.search.match( /print-pdf/gi ) ) {
-				var link = document.createElement( 'link' );
-				link.rel = 'stylesheet';
-				link.type = 'text/css';
-				link.href = 'css/print/pdf.css';
-				document.getElementsByTagName( 'head' )[0].appendChild( link );
-			}
-		</script>
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+	if (window.location.search.match(/print-pdf/gi)) {
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = 'css/print/pdf.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	}
+</script>
 
-		<!--[if lt IE 9]>
+<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
-	</head>
+</head>
 
-	<body>
+<body>
 
-		<div class="reveal">
+	<div class="reveal">
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+			<section>
+				<h3>Einsatz von Sonar</h3>
+				<h4>zur Absicherung von Architekturregeln</h4>
+
+				<!-- bild -->
+				<img style="border: none;" alt="sonar"
+					src="../../presentation/images/sonar.jpg">
+				<p>
+					<small>präsentiert von </small> <br> <small>Dimitrij
+						Pinneker & Derrick Fiedler </small>
+				</p>
+			</section>
+
+			<section>
+				<h3>Ist-Zustand</h3>
+				<ul>
+					<li>Nächtliche Analyse</li>
+					<li>Kein direkter Feedback bei Regelverletzungen</li>
+					<li>Sammlung von Regelverletzungen
+						<ul>
+							<li>Duplications</li>
+							<li>Coding Standards</li>
+							<li>Lack of Coverage</li>
+							<li>Potential bugs</li>
+							<li>Complexity</li>
+							<li>Documentation</li>
+							<li>Design</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>Soll-Zustand</h3>
+				<ul>
+					<li>Besserer Code ins DCVS</li>
+					<li>Keine neue Regelverletzungen</li>
+					<li>Frühzeitger Feedback bei Regelverletzungen</li>
+					<li>Lokale Prüfung der geänderte Quellcode gegen aktive Regeln</li>
+				</ul>
+			</section>
+
+			<!-- Vorstellung Sonar -->
+			<section>
+				<h3>Agenda</h3>
+				<ul>
+					<li>Vorstellung SonarQube</li>
+					<li>Nutzung auf dem CI-System</li>
+					<li>Nutzung von SonarQube</li>
+					<li>Vorführung</li>
+				</ul>
+			</section>
+
+			<!-- Vorstellung Sonar -->
+			<section>
 				<section>
-					<h2>Einsatz von Sonar</h2>
-					<h4>zur Absicherung von Architekturregeln</h4>
-					
-					<!-- bild -->
-					<img style="border:none;" alt="sonar" src="../../presentation/images/sonar.jpg">
-					<p>
-						<small>präsentiert von </small> <br>
-						<small>Dimitrij Pinneker & Derrick Fiedler </small>
-					</p>
+					<h3>Vorstellung SonarQube</h3>
 				</section>
-				
 				<section>
-					<h2>Ist-Zustand</h2>
+					<h3>Vorstellung SonarQube</h3>
+					<h3>Bestandteile</h3>
+				</section>
+				<section>
+					<h3>Vorstellung SonarQube</h3>
+					<h3>Begriffe / Konzepte hinter Sonar</h3>
+				</section>
+				<section>
+					<h3>Vorstellung SonarQube</h3>
+					<h3>Regeln / Metriken</h3>
+				</section>
+				<section>
+					<h3>Vorstellung SonarQube</h3>
+					<h3>
+						<small><a href="#">Durchführung...</a></small>
+					</h3>
+				</section>
+			</section>
+
+			<!-- Nutzung auf dem CI-System -->
+			<section>
+				<section>
+					<h3>Nutzung auf dem CI-System</h3>
+				</section>
+				<section>
+					<h3>Nutzung auf dem CI-System</h3>
+					<h3>Betonung, dass Buildbreaker universell eingesetzt werden
+						kann</h3>
+				</section>
+				<section>
+					<h3>Nutzung auf dem CI-System</h3>
+					<h3>Verschiedene Integrationsmöglichkeiten ins CI-System
+						darstellen</h3>
 					<ul>
-						<li>Nächtliche Analyse</li>
-						<li>Kein direkter Feedback bei Regelverletzungen</li>
-						<li>Sammlung von Regelverletzungen
+						<li>Nightly check</li>
+						<li>Code Analyse bei jedem Push</li>
+						<li>Zusammen mit Gerrit für pre-commit-checks</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Nutzung auf dem CI-System</h3>
+					<h3>
+						<small><a href="#">Durchführung...</a></small>
+					</h3>
+				</section>
+			</section>
+
+			<!-- Nutzung von SonarQube -->
+			<section>
+				<section>
+					<h3>Nutzung von SonarQube</h3>
+					<ul>
+						<li>SonarQube Runner</li>
+						<li>Maven</li>
+						<li>SonarQube Ant Task</li>
+						<li>Gradle</li>
+						<li>CI Engine</li>
+					</ul>
+				</section>
+
+				<!-- SonarQube Runner -->
+				<section>
+					<h3>Nutzung von SonarQube</h3>
+					<h4>SonarQube Runner</h4>
+					<ul>
+						<li>Empfohlen für keine Maven Projekte</li>
+						<li>Letzte Vesion: 2.4</li>
+						<li>Voraussetzung
 							<ul>
-								<li>Duplications</li>
-								<li>Coding Standards</li>
-								<li>Lack of Coverage</li>
-								<li>Potential bugs</li>
-								<li>Complexity</li>
-								<li>Documentation</li>
-								<li>Design</li>
+								<li>Java 6 oder &ge;</li>
+								<li>SonarQube Version &ge; 3.7</li>
 							</ul>
 						</li>
-					</ul>
-				</section>
-				
-				<section>
-					<h2>Soll-Zustand</h2>
-					<ul>
-						<li>Besserer Code ins DCVS</li>
-						<li>Keine neue Regelverletzungen</li>
-						<li>Frühzeitger Feedback bei Regelverletzungen</li>
-						<li>Lokale Prüfung der geänderte  Quellcode  gegen aktive Regeln</li>
-				    </ul>
-				</section>
-				
-				<!-- Vorstellung Sonar -->
-				<section>
-					<h2>Agenda</h2>
-					<ul>
-						<li>Vorstellung Sonarque</li>
-						<li>Nutzung auf dem CI-System</li>
-						<li>Nutzung der Sonarqube aus Eclipse</li>
-						<li>Vorführung</li>
-					</ul>
-				</section>
-				
-				<!-- Vorstellung Sonar -->
-				<section>
-					<section>
-						<h2>Vorstellung Sonarqube</h2>
-					</section>
-					<section>
-						<h2>Vorstellung Sonarqube</h2>
-						<h3>Bestandteile</h3>
-					</section>
-					<section>
-						<h2>Vorstellung Sonarqube</h2>
-						<h3>Begriffe / Konzepte hinter Sonar</h3>
-					</section>
-					<section>
-						<h2>Vorstellung Sonarqube</h2>
-						<h3>Regeln / Metriken</h3>
-					</section>
-					<section>
-						<h2>Vorstellung Sonarqube</h2>
-						<h3><small><a href="#">Durchführung...</a></small></h3>
-					</section>
-				</section>
-				
-				<!-- Nutzung auf dem CI-System -->
-				<section>
-					<section>
-						<h2>Nutzung auf dem CI-System</h2>
-					</section>
-					<section>
-						<h2>Nutzung auf dem CI-System</h2>
-						<h3>Betonung, dass Buildbreaker universell eingesetzt werden kann</h3>
-					</section>
-					<section>
-						<h2>Nutzung auf dem CI-System</h2>
-						<h3>Verschiedene Integrationsmöglichkeiten ins CI-System darstellen</h3>
-						<ul>
-							<li>Nightly check</li>
-							<li>Code Analyse bei jedem Push</li>
-							<li>Zusammen mit Gerrit für pre-commit-checks</li>
-						</ul>
-					</section>
-					<section>
-						<h2>Nutzung auf dem CI-System</h2>
-						<h3><small><a href="#">Durchführung...</a></small></h3>
-					</section>
-				</section>
+						<li>Einstellung via sonar-runner.properties</li>
+						<li>sonar-project.properties in Projekt <br />
 
-				<!-- Nutzung der Sonarqube -->
-				<section>
-					<section>
-						<h2>Nutzung der Sonarqube aus Eclipse</h2>
 							<ul>
-								<li>TODO:Ausführungsmöglichkeit
-									<ul>
-										<li>Maven: mvn sonar:sonar</li>
-										<li>Ant/ Standalone</li>
-										<li>IDE</li>
-									</ul>
-								</li>
-								<li>Einstellung</li>
-								<li>Durchführung</li>
+								<li>sonar.projectKey=my:project</li>
+								<li>sonar.projectName=My project</li>
+								<li>sonar.projectVersion=1.0</li>
+								<li>sonar.sources=src (Optional: SonarQube 4.2)</li>
 							</ul>
-					</section>
-					<section>
-						<h2>Nutzung der Sonarqube aus Eclipse</h2>
-						<h3>TODO:Ausführungsmöglichkeit</h3>
-					</section>
-					<section>
-						<h2>Nutzung der Sonarqube aus Eclipse</h2>
-						<h3>Einstellung</h3>
-					</section>
-					<section>
-						<h2>Nutzung der Sonarqube aus Eclipse</h2>
-						<h3>Regelwerk jenseits von Checkstyle & co</h3>
-						<small>verweis auf Clean Code...</small>
-					</section>
-					<section>
-						<h2>Nutzung der Sonarqube aus Eclipse</h2>
-						<h3><small><a href="#">Durchführung...</a></small></h3>
-					</section>
+
+						</li>
+						<li><b>sonar-runner</b> ausführen</li>
+					</ul>
 				</section>
-								
+
 				<section>
-					<p>Danke für Ihre Aufmerksamkeit!</p>
-					<p>Fragen? </p>
+					<h3>Nutzung von SonarQube</h3>
+					<h4>Maven</h4>
+					<ul>
+						<li>Empfohlen für Maven Projekte</li>
+						<li>Voraussetzung <br /> <small>
+								<ul>
+									<li>Maven <i>(<a target="_blank"
+											href="http://docs.codehaus.org/display/SONAR/Analyzing+Source+Code#AnalyzingSourceCode-CompatibilityMatrix">
+												Kompatibilitätsprüfung</a>)
+									</i></li>
+								</ul>
+						</small>
+						</li>
+						<li>Einstellung via settings.xml</li>
+					</ul>
 				</section>
-			</div>
-			
-		</div> 
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
+				<section data-state="customevent">
+					<h3>Nutzung von SonarQube</h3>
+					<h4>Maven</h4>
+					<b>Settings.xml</b>
+					<pre>
+						<code data-trim contenteditable style="font-size: 18px;">
+							<settings>
+							    <profiles>
+							        <profile>
+							            <id>sonar</id>
+							            <activation>
+							                <activeByDefault>true</activeByDefault>
+							            </activation>
+							            <properties>
+							                <!-- Example for MySQL-->
+							                <sonar.jdbc.url>
+							                  jdbc:mysql://localhost:3306/sonar?useUnicode=true&amp;characterEncoding=utf8
+							                </sonar.jdbc.url>
+							                <sonar.jdbc.username>sonar</sonar.jdbc.username>
+							                <sonar.jdbc.password>sonar</sonar.jdbc.password>
+							 
+							                <!-- Optional URL to server. Default value is http://localhost:9000 -->
+							                <sonar.host.url>http://myserver:9000</sonar.host.url>
+							            </properties>
+							        </profile>
+							     </profiles>
+							</settings>
+						</code>
+					</pre>
+				</section>
 
-		<script>
+				<section>
+					<h3>Nutzung von SonarQube</h3>
+					<h4>Maven</h4>
+					<ul>
+						<li>mvn clean install</li>
+						<li>mv sonar:sonar ausführen</li>
+					</ul>
+				</section>
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
+				<section>
+					<h3>Nutzung von SonarQube</h3>
+					<h4>SonarQube Ant Task</h4>
+				</section>
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+				<section>
+					<h3>Nutzung von SonarQube</h3>
+					<h4>Gradle</h4>
+				</section>
 
-				// Parallax scrolling
-				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-				// parallaxBackgroundSize: '2100px 900px',
+				<section>
+					<h3>Nutzung von SonarQube</h3>
+					<h4>CI Engine</h4>
+				</section>
 
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
+				<section>
+					<h3>Einbidung der SonarQube aus Eclipse</h3>
+					<h3>Einstellung</h3>
+				</section>
 
-		</script>
+				<section>
+					<h3>Einbidung der SonarQube aus Eclipse</h3>
+					<h3>Regelwerk jenseits von Checkstyle & co</h3>
+					<small>verweis auf Clean Code...</small>
+				</section>
+				<section>
+					<h3>Nutzung der SonarQube aus Eclipse</h3>
+					<h3>
+						<small><a href="#">Durchführung...</a></small>
+					</h3>
+				</section>
+			</section>
 
-	</body>
+			<section>
+				<p>Danke für Ihre Aufmerksamkeit!</p>
+				<p>Fragen?</p>
+			</section>
+		</div>
+
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.min.js"></script>
+
+	<script>
+		// Full list of configuration options available here:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls : true,
+			progress : true,
+			history : true,
+			center : true,
+
+			theme : Reveal.getQueryHash().theme, // available themes are in /css/theme
+			transition : Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+			// Parallax scrolling
+			// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+			// parallaxBackgroundSize: '2100px 900px',
+
+			// Optional libraries used to extend on reveal.js
+			dependencies : [ {
+				src : 'lib/js/classList.js',
+				condition : function() {
+					return !document.body.classList;
+				}
+			}, {
+				src : 'plugin/markdown/marked.js',
+				condition : function() {
+					return !!document.querySelector('[data-markdown]');
+				}
+			}, {
+				src : 'plugin/markdown/markdown.js',
+				condition : function() {
+					return !!document.querySelector('[data-markdown]');
+				}
+			}, {
+				src : 'plugin/highlight/highlight.js',
+				async : true,
+				callback : function() {
+					hljs.initHighlightingOnLoad();
+				}
+			}, {
+				src : 'plugin/zoom-js/zoom.js',
+				async : true,
+				condition : function() {
+					return !!document.body.classList;
+				}
+			}, {
+				src : 'plugin/notes/notes.js',
+				async : true,
+				condition : function() {
+					return !!document.body.classList;
+				}
+			} ]
+		});
+	</script>
+
+</body>
 </html>
