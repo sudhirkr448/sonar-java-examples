@@ -53,8 +53,7 @@
 				<h4>zur Absicherung von Architekturregeln</h4>
 
 				<!-- bild -->
-				<img style="border: none;" alt="sonar"
-					src="../../presentation/images/sonar.jpg">
+				<img style="border: none;" alt="sonar" src="../../presentation/images/sonar.jpg">
 				<p>
 					<small>präsentiert von </small> <br> <small>Dimitrij
 						Pinneker & Derrick Fiedler </small>
@@ -256,21 +255,129 @@
 				<section>
 					<h3>Nutzung von SonarQube</h3>
 					<h4>SonarQube Ant Task</h4>
+					<ul>
+						<li>Empfohlen für Projekte, die mit Ant gebaut werden</li>
+						<li>Letzte Vesion: 2.1</li>
+						<li>Voraussetzung
+							<ul>
+								<li>Java 6 oder &ge;</li>
+								<li>SonarQube Version &ge; 3.0</li>
+								<li>Ant 1.7.1 or &ge;</li>
+								<li>Java 1.6 or &ge;</li>
+								<li><i>(<a target="_blank"
+										href="http://docs.codehaus.org/display/SONAR/Analyzing+Source+Code#AnalyzingSourceCode-CompatibilityMatrix">
+											Kompatibilitätsprüfung</a>)
+								</i></li>
+							</ul>
+						</li>
+						<li>Integration der SonarQube Analyse in ein Ant build skript</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Nutzung von SonarQube</h3>
+					<h4>SonarQube Ant Task</h4>
+					<b>Definition eines Sonar Ant Target</b>
+					<pre>
+						<code data-trim contenteditable style="font-size: 18px;">
+							<project name="My Project" default="all" basedir="."
+								xmlns:sonar="antlib:org.sonar.ant">
+								<!-- Define the SonarQube global properties (the most usual way is to pass these properties via the command line) -->
+								<property name="sonar.jdbc.url" value="jdbc:mysql://localhost:3306/sonar?useUnicode=true&amp;characterEncoding=utf8" />
+								<property name="sonar.jdbc.username" value="sonar" />
+								<property name="sonar.jdbc.password" value="sonar" />
+								<!-- Define the SonarQube project properties -->
+								<property name="sonar.projectKey" value="org.codehaus.sonar:example-java-ant" />
+								<property name="sonar.projectName" value="Simple Java Project analyzed with the SonarQube Ant Task" />
+								<property name="sonar.projectVersion" value="1.0" />
+								<property name="sonar.language" value="java" />
+								<property name="sonar.sources" value="src" />
+								<property name="sonar.binaries" value="build/*.jar" />
+								<!-- Define the SonarQube target -->
+								<target name="sonar">
+								    <taskdef uri="antlib:org.sonar.ant" resource="org/sonar/ant/antlib.xml">
+								        <!-- Update the following line, or put the "sonar-ant-task-*.jar" file in your "$HOME/.ant/lib" folder -->
+								        <classpath path="path/to/sonar/ant/task/lib/sonar-ant-task-*.jar" />
+								    </taskdef>
+								 
+								    <!-- Execute the SonarQube analysis -->
+								    <sonar:sonar />
+								</target>
+						
+						</code>
+					</pre>
+				</section>
+
+				<section>
+					<h3>Nutzung von SonarQube</h3>
+					<h4>SonarQube Ant Task</h4>
+					<ul>
+						<li>ant sonar ausführen</li>
+					</ul>
 				</section>
 
 				<section>
 					<h3>Nutzung von SonarQube</h3>
 					<h4>Gradle</h4>
+					<ul>
+						<li>Empfohlen für Projekte, die mit Gradle gebaut werden</li>
+						<li>Voraussetzung
+							<ul>
+								<li>Sonar Runner Plugin</li>
+								<li>build.gradle <br/>
+									<pre>
+										<code data-trim contenteditable style="font-size: 18px;">
+											apply plugin: "sonar-runner"
+										</code>
+									</pre>
+								</li>
+					    	</ul>
+					    </li>
+					    <li><b>gradle sonarRunner</b> ausführen</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h3>Nutzung von SonarQube</h3>
+					<h4>Gradle</h4>
+					<b>SonarRunner Konfiguration</b>
+					<pre>
+						<code data-trim contenteditable style="font-size: 18px;">
+							sonarRunner {
+							    sonarProperties {
+							        property "sonar.host.url", "http://localhost:9000"
+							        property "sonar.jdbc.url", "jdbc:mysql://localhost/sonar"
+							        property "sonar.jdbc.driverClassName", "com.mysql.jdbc.Driver"
+							        property "sonar.jdbc.username", "admin"
+							        property "sonar.jdbc.password", "admin"
+							    }
+							}
+						</code>
+					</pre>					
 				</section>
 
 				<section>
 					<h3>Nutzung von SonarQube</h3>
 					<h4>CI Engine</h4>
+					<ul>
+						<li>Analyse durch CI Server
+							<ul>
+								<li>Jenkins Plugin</li>
+								<li>Hudson Plugin</li>
+								<li>Atlassian Bamboo</li>
+								<li>...</li>
+							</ul>
+						</li>
+					</ul>
 				</section>
 
 				<section>
-					<h3>Einbidung der SonarQube aus Eclipse</h3>
+					<h3>SonarQube aus Eclipse</h3>
 					<h3>Einstellung</h3>
+					<ul>
+						<li>SonarQube Plugin über <b>Eclipse Marketplace...</b></li>
+					</ul>
+					<img style="border: none;" alt="marketplace" src="../../presentation/images/sonarqube-marketplace.png">
 				</section>
 
 				<section>
