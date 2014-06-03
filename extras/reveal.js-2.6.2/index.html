@@ -52,8 +52,8 @@
 				<h3>Einsatz von Sonar</h3>
 				<h4>zur Absicherung von Architekturregeln</h4>
 
-				<!-- bild -->
-				<img style="border: none;" alt="sonar" src="../../presentation/images/sonar.jpg">
+				<!-- Startbild -->
+				<img style="width:80%; border: none;" alt="sonar" src="../../presentation/images/sonar.jpg">
 				<p>
 					<small>präsentiert von </small> <br> <small>Dimitrij
 						Pinneker & Derrick Fiedler </small>
@@ -85,7 +85,7 @@
 					<li>Besserer Code ins DCVS</li>
 					<li>Keine neue Regelverletzungen</li>
 					<li>Frühzeitger Feedback bei Regelverletzungen</li>
-					<li>Lokale Prüfung der geänderte Quellcode gegen aktive Regeln</li>
+					<li>Lokale Prüfung der geänderten Quellcode gegen aktive Regeln</li>
 				</ul>
 			</section>
 
@@ -174,6 +174,13 @@
 			<section>
 				<section>
 					<h3>Nutzung von SonarQube</h3>
+					<div>
+						<img style="width:100%; border: none;" alt="techical-architecture" 
+							 src="../../presentation/images/technical-architecture.jpeg">
+					</div>
+				</section>
+				<section>
+					<h3>Nutzung von SonarQube</h3>
 					<ul>
 						<li>SonarQube Runner</li>
 						<li>Maven</li>
@@ -197,16 +204,7 @@
 							</ul>
 						</li>
 						<li>Einstellung via sonar-runner.properties</li>
-						<li>sonar-project.properties in Projekt <br />
-
-							<ul>
-								<li>sonar.projectKey=my:project</li>
-								<li>sonar.projectName=My project</li>
-								<li>sonar.projectVersion=1.0</li>
-								<li>sonar.sources=src (Optional: SonarQube 4.2)</li>
-							</ul>
-
-						</li>
+						<li>sonar-project.properties in Projekt</li>
 						<li><b>sonar-runner</b> ausführen</li>
 					</ul>
 				</section>
@@ -225,7 +223,7 @@
 								</ul>
 						</small>
 						</li>
-						<li>Einstellung via settings.xml</li>
+						<li>Einstellung via settings.xml/ POM.xml</li>
 					</ul>
 				</section>
 
@@ -273,14 +271,13 @@
 					<h3>Nutzung von SonarQube</h3>
 					<h4>SonarQube Ant Task</h4>
 					<ul>
-						<li>Empfohlen für Projekte, die mit Ant gebaut werden</li>
+						<li>Empfohlen für Ant Projekte</li>
 						<li>Letzte Vesion: 2.1</li>
 						<li>Voraussetzung
 							<ul>
 								<li>Java 6 oder &ge;</li>
 								<li>SonarQube Version &ge; 3.0</li>
 								<li>Ant 1.7.1 or &ge;</li>
-								<li>Java 1.6 or &ge;</li>
 								<li><i>(<a target="_blank"
 										href="http://docs.codehaus.org/display/SONAR/Analyzing+Source+Code#AnalyzingSourceCode-CompatibilityMatrix">
 											Kompatibilitätsprüfung</a>)
@@ -329,7 +326,7 @@
 					<h3>Nutzung von SonarQube</h3>
 					<h4>SonarQube Ant Task</h4>
 					<ul>
-						<li>ant sonar ausführen</li>
+						<li><b>ant sonar</b> ausführen</li>
 					</ul>
 				</section>
 
@@ -337,7 +334,7 @@
 					<h3>Nutzung von SonarQube</h3>
 					<h4>Gradle</h4>
 					<ul>
-						<li>Empfohlen für Projekte, die mit Gradle gebaut werden</li>
+						<li>Empfohlen für Gradle Projekte</li>
 						<li>Voraussetzung
 							<ul>
 								<li>Sonar Runner Plugin</li>
@@ -381,7 +378,7 @@
 							<ul>
 								<li>Jenkins Plugin</li>
 								<li>Hudson Plugin</li>
-								<li>Atlassian Bamboo</li>
+								<li>TeamCity</li>
 								<li>...</li>
 							</ul>
 						</li>
@@ -390,18 +387,74 @@
 
 				<section>
 					<h3>SonarQube aus Eclipse</h3>
-					<h3>Einstellung</h3>
+					<h4>Einstellung</h4>
 					<ul>
-						<li>SonarQube Plugin über <b>Eclipse Marketplace...</b></li>
+						<li>SonarQube Plugin via <b>Eclipse Marketplace...</b></li>
+						<li>Suche nach <b>SonarQube</b></li>
+						<li>Installieren</li>
 					</ul>
-					<img style="border: none;" alt="marketplace" src="../../presentation/images/sonarqube-marketplace.png">
 				</section>
 
 				<section>
-					<h3>Einbidung der SonarQube aus Eclipse</h3>
-					<h3>Regelwerk jenseits von Checkstyle & co</h3>
-					<small>verweis auf Clean Code...</small>
+					<h3>SonarQube aus Eclipse</h3>
+					<h4>Einstellung</h4>
+					<img style="width:100%;" alt="sonar-preferences" src="../../presentation/images/sonarqube-config.1.png">
 				</section>
+				
+				<section>
+					<h3>SonarQube aus Eclipse</h3>
+					<h4>Einstellung</h4>
+					<div>
+						<b>Verbindung zu Sonarqube Server</b>
+						<img style="width:100%;" alt="sonar-preferences" src="../../presentation/images/sonarqube-config.2.png">
+					</div>
+				</section>
+				
+				<section>
+					<h3>SonarQube aus Eclipse</h3>
+					<h4>Einstellung</h4>
+					<div>
+						<b>Verbindung zu Sonarqube Server</b>
+						<img style="width:100%;" alt="sonar-preferences" src="../../presentation/images/sonarqube-config.3.png">
+					</div>
+				</section>
+				
+				<section>
+					<h3>SonarQube aus Eclipse</h3>
+					<h4>Einstellung</h4>
+					<div>
+						<b>Einstellung des Analysenmodus</b>
+						<img style="width:100%;" alt="sonar-preferences" src="../../presentation/images/sonarqube-config.4.png">
+					</div>
+				</section>
+				
+				<section>
+					<h3>SonarQube aus Eclipse</h3>
+					<h4>Einstellung</h4>
+						<b>Einstellung des Analysenmodus</b> <br/>
+						<ul>
+							<li>sonar.analysis.mode
+								<ul>
+									<li>analysis</li>
+									<li>preview</li>
+									<li>incremental</li>
+								</ul>
+							</li>
+						</ul>
+				</section>
+				
+				<section>
+					<h3>SonarQube aus Eclipse</h3>
+					<h4>Einstellung</h4>
+					<ul>
+						<li>Assoziiere Java Projekt zu Sonarqube</li>
+						<li>Analyse durchführen mit <b>Ctrl + Alt + Q</b></li>
+					</ul>
+					<div>
+						<img style="width:80%;" alt="sonar-preferences" src="../../presentation/images/sonarqube-config.5.png">
+					</div>
+				</section>
+				
 				<section>
 					<h3>Nutzung der SonarQube aus Eclipse</h3>
 					<h3>
