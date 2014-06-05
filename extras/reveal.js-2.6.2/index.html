@@ -221,7 +221,7 @@
 					<h3>Nutzung von SonarQube</h3>
 					<h4>SonarQube Runner</h4>
 					<ul>
-						<li>Empfohlen für keine Maven Projekte</li>
+						<li>Default Programm zur Analyse von Projekten</li>
 						<li>Letzte Vesion: 2.4</li>
 						<li>Voraussetzung
 							<ul>
@@ -256,30 +256,26 @@
 				<section data-state="customevent">
 					<h3>Nutzung von SonarQube</h3>
 					<h4>Maven</h4>
-					<b>Settings.xml</b>
+					<b>POM.xml</b>
 					<pre>
 						<code data-trim contenteditable style="font-size: 18px;">
-							<settings>
-							    <profiles>
-							        <profile>
-							            <id>sonar</id>
-							            <activation>
-							                <activeByDefault>true</activeByDefault>
-							            </activation>
-							            <properties>
-							                <!-- Example for MySQL-->
-							                <sonar.jdbc.url>
-							                  jdbc:mysql://localhost:3306/sonar?useUnicode=true&amp;characterEncoding=utf8
-							                </sonar.jdbc.url>
-							                <sonar.jdbc.username>sonar</sonar.jdbc.username>
-							                <sonar.jdbc.password>sonar</sonar.jdbc.password>
-							 
-							                <!-- Optional URL to server. Default value is http://localhost:9000 -->
-							                <sonar.host.url>http://myserver:9000</sonar.host.url>
-							            </properties>
-							        </profile>
-							     </profiles>
-							</settings>
+							<?xml version="1.0" encoding="UTF-8"?>
+							<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+							  <modelVersion>4.0.0</modelVersion>
+							
+							  <groupId>org.example</groupId>
+							  <artifactId>sonar-maven-example</artifactId>
+							  <version>1.0-SNAPSHOT</version>
+							
+							  <name>Simple Java Maven Project</name>
+							
+							  <properties>
+							    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+							    <sonar.language>java</sonar.language>
+							    <sonar.host.url>http://localhost:9000</sonar.host.url>
+							    <sonar.branch>x</sonar.branch>
+							  </properties>
+							</project>
 						</code>
 					</pre>
 				</section>
@@ -518,10 +514,6 @@
 				<p>Fragen?</p>
 			</section>
 			
-			<section>
-				<h3>Tipps</h3>
-				<p>????</p>
-			</section>
 		</div>
 
 	</div>
